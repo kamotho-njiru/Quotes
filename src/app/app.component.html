@@ -1,9 +1,9 @@
 <div>
-    <h1>{{title}}</h1>
+    <h1>Quotes</h1>
     <ul>
         <li *ngFor='let quotes of quotes'> {{quotes}}
 
         </li>
     </ul>
-    <p>My quote for today is {{ quotes }}</p>
+    <p> *ngIf='quote.length > 4' Your quotes are too many </p>
 </div>
