@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Quotes } from '../quotes';
 
 @Component({
@@ -7,10 +7,10 @@ import { Quotes } from '../quotes';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
-  quotes:Quotes[]=[
-    {id:1, name: 'perseverance is key', description:'Endurance'},
-    {id:2, name: 'slow steady and sure', description:'step by step'},
-    {id:3, name: 'one foot infront of the other', description:'progressive'}
+  quotes: Quotes[]=[
+    new Quotes(1,'perseverance is key','Endurance'),
+    new Quotes(2,'slow steady and sure','step by step'),
+    new Quotes(3,'one foot infront of the other','progressive')
   ];
   constructor() { }
 
