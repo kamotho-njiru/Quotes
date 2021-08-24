@@ -8,9 +8,9 @@ import { Quotes } from '../quotes';
 })
 export class QuotesComponent implements OnInit {
   quotes:Quotes[]=[
-    {id:1, name: 'perseverance is key'},
-    {id:2, name: 'slow steady and sure'},
-    {id:3, name: 'one foot infront of the other'}
+    {id:1, name: 'perseverance is key', description:'Endurance'},
+    {id:2, name: 'slow steady and sure', description:'step by step'},
+    {id:3, name: 'one foot infront of the other', description:'progressive'}
   ];
   constructor() { }
 
