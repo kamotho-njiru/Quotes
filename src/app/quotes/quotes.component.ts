@@ -8,9 +8,9 @@ import { Quotes } from '../quotes';
 })
 export class QuotesComponent implements OnInit {
   quotes: Quotes[]=[
-    new Quotes(1,'perseverance is key','Endurance'),
-    new Quotes(2,'slow steady and sure','step by step'),
-    new Quotes(3,'one foot infront of the other','progressive')
+    new Quotes(1,'perseverance is key','Endurance',new Date(2021,8,28)),
+    new Quotes(2,'slow steady and sure','step by step', new Date(2021,8,28)),
+    new Quotes(3,'one foot infront of the other','progressive', new Date(2021,8,28))
   ];
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
