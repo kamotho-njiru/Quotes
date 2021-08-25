@@ -12,6 +12,9 @@ export class QuotesComponent implements OnInit {
     new Quotes(2,'slow steady and sure','step by step'),
     new Quotes(3,'one foot infront of the other','progressive')
   ];
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
   constructor() { }
 
   ngOnInit(): void {
