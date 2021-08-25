@@ -10,6 +10,9 @@ export class QuotesDetailsComponent implements OnInit {
   @Input() quote: Quotes = {id: 0, name: '', description: '', showDescription: false , completeDate: new Date}
   @Output() iscomplete = new EventEmitter<boolean>();
 
+  quoteDelete(complete:boolean){
+    this.iscomplete.emit(complete)
+  }
   quoteComplete(complete:boolean){
     this.iscomplete.emit(complete);
   }
