@@ -1,10 +1,10 @@
-h1> My Quotes</h1>
+<h1> My Quotes</h1>
 <hr>
 <ul>
     <div *ngFor='let quote of quotes;let i = index'>
-        <li>{{quote.name}</li>
+        <li>{{quote.name}}</li>
         <button (click)='toggleDetails(i)'>Toggle Details</button>
-        <app-quotes-details *ngIf='quote.showDescription' [quote]='quote' (is complete)='completeQuote($event,i)'>
+        <app-quotes-details *ngIf='quote.showDescription' [quote]='quote' (iscomplete)='completeQuote($event,i)'>
         </app-quotes-details>
     </div>
 </ul>
