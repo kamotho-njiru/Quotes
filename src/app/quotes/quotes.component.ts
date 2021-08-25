@@ -12,6 +12,15 @@ export class QuotesComponent implements OnInit {
     new Quotes(2,'slow steady and sure','step by step', new Date(2021,8,28)),
     new Quotes(3,'one foot infront of the other','progressive', new Date(2021,8,28))
   ];
+  deleteQuote(iscomplete, index){
+    if (iscomplete){
+      let toDelete =confirm('Are you sure you want to delete ${this.quotes[index].name}?')
+
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
+    }
+  }
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
